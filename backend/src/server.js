@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 5000;
     await sequelize.authenticate();
 
     console.log("Database connected");
-
+   
+    require("./models");
     await sequelize.sync();
     console.log("Tables synced");
 
